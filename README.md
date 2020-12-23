@@ -52,6 +52,19 @@ In order to set up the Argoverse dataset for training and evaluation, follow the
     --map-features --xy-features --normalize --extra-map-features \
     --compute-all --generate-candidate-centerlines 6
     ```
+   
+   on the 2080ti server, use cmd:
+    - add --num-cpus limit 
+   
+   ```bash
+   python scripts/run_preprocess.py --dataroot ./data/argoverse_raw/ \
+   --mode val --save-dir ./data/argoverse_processed --social-features \
+   --map-features --xy-features --normalize --extra-map-features \
+   --compute-all --generate-candidate-centerlines 6 \
+   --num-cpus 6
+   ```
+   
+
 
 ## Usage
 
